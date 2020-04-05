@@ -1,5 +1,8 @@
 # Gitub Pages Site
 
+[![forthebadge](https://forthebadge.com/images/badges/gluten-free.svg)](https://forthebadge.com)
+[![forthebadge](https://forthebadge.com/images/badges/designed-in-ms-paint.svg)](https://forthebadge.com)
+
 Personal portfolio site hosted on Github Pages.
 
 Deployed code is located on `master` branch, source code on `source` branch.
