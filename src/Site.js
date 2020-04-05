@@ -41,7 +41,7 @@ const useStyles = makeStyles((theme) => ({
     color: "white",
   },
   darken: {
-    backgroundColor: "rgba(130, 141, 127, 0.5)",
+    backgroundColor: "rgba(48, 51, 68, 0.8)",
     height: "calc(100% + 24px)",
   },
   fullHeight: {

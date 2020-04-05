@@ -5,7 +5,7 @@ import Site from "./Site";
 
 function App() {
   return (
-    <ThemeProvider theme={theme} injectFirst>
+    <ThemeProvider theme={theme}>
       <CssBaseline />
       <Site />
     </ThemeProvider>
