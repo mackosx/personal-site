@@ -145,7 +145,7 @@ function Site() {
                   align="center"
                   style={{ color: theme.palette.text.secondary }}
                 >
-                  ReactJS Enthusiast
+                  Simple code is better code
                 </Typography>
               </Grid>
               <Grid item xs={12} sm="auto">
