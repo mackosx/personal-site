@@ -1,4 +1,8 @@
 <%= form_with model: article do |form| %>
+  <p>
+    <%= form.label :status %><br>
+    <%= form.select :status, ['public', 'private', 'archived'], selected: 'public' %>
+  </p>
   <div>
     <%= form.label :title %><br>
     <%= form.text_field :title %>
