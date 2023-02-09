@@ -7,4 +7,8 @@ class Article < ApplicationRecord
   def created_date
     created_at.localtime.strftime '%-d/%-m/%Y'
   end
+
+  def archived?
+    status == 'archived'
+  end
 end
