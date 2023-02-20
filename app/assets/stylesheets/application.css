@@ -10,6 +10,51 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
+ *= require normalize-rails
  *= require_tree .
  *= require_self
  */
+
+ @font-face {
+  font-family: 'etbook';
+  src: url('etbookot-roman-webfont.woff');
+  font-weight: 400;
+  font-style: normal;
+ }
+
+ @font-face {
+  font-family: 'etbook';
+  src: url('etbookot-bold-webfont.woff');
+  font-weight: 700;
+  font-style: normal;
+ }
+
+ @font-face {
+  font-family: 'etbook';
+  src: url('etbookot-roman-webfont.woff');
+  font-weight: 400;
+  font-style: italic;
+ }
+
+ html {
+  font-size: 20px;
+  font-family:"etbook", 'Times New Roman', Times, serif;
+ }
+
+ article {
+  max-width: 30rem;
+  margin-left: auto;
+  margin-right: auto;
+ }
+
+ article header h1 {
+  text-align: center;
+ }
+
+ article header h4 {
+  text-align: center;
+ }
+
+ p {
+  line-height: 1.4;
+ }
