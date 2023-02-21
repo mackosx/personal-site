@@ -22,7 +22,7 @@ gem "importmap-rails"
 gem "turbo-rails"
 
 # Hotwire's modest JavaScript framework [https://stimulus.hotwired.dev]
-gem "stimulus-rails"
+# gem "stimulus-rails"
 
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 gem "jbuilder"
@@ -65,6 +65,7 @@ group :development do
   # gem "spring"
   gem 'rubocop', require: false
   gem 'rubocop-daemon', require: false
+  gem 'reek', require: false
 end
 
 group :test do
