@@ -124,7 +124,7 @@ a {
   /* font-variant: all-small-caps; */
 }
 
-a:visited {
+a:any-link {
   color: inherit;
 }
 
