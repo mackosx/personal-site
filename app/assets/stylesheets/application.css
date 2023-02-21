@@ -15,46 +15,74 @@
  *= require_self
  */
 
- @font-face {
+@font-face {
   font-family: 'etbook';
   src: url('etbookot-roman-webfont.woff');
   font-weight: 400;
   font-style: normal;
- }
+}
 
- @font-face {
+@font-face {
   font-family: 'etbook';
   src: url('etbookot-bold-webfont.woff');
   font-weight: 700;
   font-style: normal;
- }
+}
 
- @font-face {
+@font-face {
   font-family: 'etbook';
   src: url('etbookot-roman-webfont.woff');
   font-weight: 400;
   font-style: italic;
- }
+}
 
- html {
+* {
+  box-sizing: border-box;
+}
+
+html {
   font-size: 20px;
   font-family:"etbook", 'Times New Roman', Times, serif;
- }
+}
 
- article {
+main {
   max-width: 30rem;
   margin-left: auto;
   margin-right: auto;
- }
+}
 
- article header h1 {
+article header h1 {
   text-align: center;
- }
+}
 
- article header h4 {
+article header h4 {
   text-align: center;
- }
+}
 
- p {
+p {
   line-height: 1.4;
- }
+}
+
+form input, form textarea {
+  width: 100%;
+}
+
+form input {
+  height: 2rem;
+}
+
+form label {
+  font-variant: all-small-caps;
+}
+
+form textarea {
+  padding: 0.5rem;
+  border: 1px dashed rgb(165, 165, 165);
+}
+
+form input[type='submit'] {
+  background-color: rgb(71, 82, 157);
+  color: white;
+  border: none;
+  cursor: pointer;
+}

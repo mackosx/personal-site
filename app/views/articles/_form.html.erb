@@ -1,23 +1,24 @@
 <%= form_with model: article do |form| %>
   <p>
     <%= form.label :status %><br>
-    <%= form.select :status, ['public', 'private', 'archived'], selected: 'public' %>
+    <%= form.select :status, ['public', 'private', 'archived'], selected: (form.object.new_record? ? "private": form.object.status) %>
   </p>
-  <div>
+  <p>
     <%= form.label :title %><br>
     <%= form.text_field :title %>
     <% article.errors.full_messages_for(:title).each do |message| %>
       <div><%= message %></div>
     <% end %>
-  </div>
-  <div>
+  </p>
+  <p>
     <%= form.label :body %><br>
-    <%= form.text_area :body %>
+    <%= form.text_area :body, rows: 10 %>
     <% article.errors.full_messages_for(:body).each do |message| %>
       <div><%= message %></div>
     <% end %>
-  </div>
-  <div>
+  </p>
+  <p>
+    <%= link_to "Cancel", (form.object.new_record? ? articles_path : article) %>
     <%= form.submit %>
-  </div>
+  </p>
 <% end %>
