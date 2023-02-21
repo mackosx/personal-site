@@ -36,6 +36,8 @@
   font-style: italic;
 }
 
+/* Text */
+
 * {
   box-sizing: border-box;
 }
@@ -63,6 +65,8 @@ p {
   line-height: 1.4;
 }
 
+/* Form */
+
 form input, form textarea {
   width: 100%;
 }
@@ -85,4 +89,34 @@ form input[type='submit'] {
   color: white;
   border: none;
   cursor: pointer;
+}
+
+/* Navigation */
+
+nav {
+  padding: 2rem;
+}
+
+nav .current {
+  box-sizing: content-box;
+  border: rgb(130, 160, 156) 3px solid;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  display: inline;
+
+}
+
+nav a {
+  padding: 0.5rem;
+}
+
+nav a:visited {
+  color: inherit;
 }

@@ -9,6 +9,13 @@
     <%= javascript_importmap_tags %>
   </head>
   <body>
+    <nav>
+      <ul>
+        <li><%= link_to "Home", root_path, class: cp(root_path, request.path) %></li>
+        |
+        <li><%= link_to "Blog", blog_path, class: cp(blog_path, request.path) %></li>
+      </ul>
+    </nav>
     <main>
       <%= yield %>
     </main>
