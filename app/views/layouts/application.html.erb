@@ -14,12 +14,26 @@
         <li><%= link_to "Home", root_path, class: cp(root_path, request.path) %></li>
         |
         <li><%= link_to "Blog", blog_path, class: cp(blog_path, request.path) %></li>
-        |
+      </ul>
+      <ul>
         <%# TODO: Make this link only for logged-in users %>
-        <li><a href="/">Admin</a></li>
+        <% if user_signed_in? %>
+          <li><a href="/">Admin</a></li>
+          |
+          <li><%= button_to "Sign out", destroy_user_session_path, method: :delete %></li>
+          <li><%= current_user.email %></li>
+        <% else %>
+          <%= button_to "Sign in", user_session_path %>
+        <% end %>
       </ul>
     </nav>
     <main>
+      <% if notice %>
+        <p class="notice"><%= notice %></p>
+      <% end %>
+      <% if alert %>
+        <p class="alert"><%= alert %></p>
+      <% end %>
       <%= yield %>
     </main>
   </body>
