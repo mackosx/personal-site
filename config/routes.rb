@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   # Defines the root path route ("/")
   root 'articles#index'
-
-  resources :articles
+  scope '/blog' do
+    resources :articles
+  end
 end
