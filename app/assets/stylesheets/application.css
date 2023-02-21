@@ -65,6 +65,26 @@ p {
   line-height: 1.4;
 }
 
+/* Links */
+
+a {
+  text-decoration: none;
+}
+
+a:any-link {
+  color: inherit;
+}
+
+a:hover {
+  text-decoration-color: rgb(130, 160, 156);
+  text-decoration: underline;
+  text-decoration-thickness: 4px;
+}
+
+a:active {
+  color: rgb(178, 220, 214);
+}
+
 /* Form */
 
 form input:not(input[type="checkbox"]),
@@ -85,11 +105,17 @@ form textarea {
   border: 1px dashed rgb(165, 165, 165);
 }
 
-form input[type="submit"] {
+form input[type="submit"],
+button {
   background-color: rgb(71, 82, 157);
   color: white;
   border: none;
   cursor: pointer;
+}
+
+form input[type="submit"]:hover,
+button:hover {
+  background-color: rgb(44, 52, 97);
 }
 
 /* Navigation */
@@ -121,22 +147,14 @@ nav a {
   padding: 0.5rem;
 }
 
-a {
-  text-decoration: none;
+div.auth form {
+  display: inline;
+  width: auto;
 }
 
-a:any-link {
-  color: inherit;
-}
-
-a:hover {
-  text-decoration-color: rgb(178, 220, 214);
-  text-decoration: underline;
-  text-decoration-thickness: 4px;
-}
-
-a:active {
-  color: rgb(178, 220, 214);
+div.auth div {
+  padding: 0 0.5rem 0.5rem 0.5rem;
+  margin-bottom: 0.5rem;
 }
 
 /* Flash messages */
@@ -148,13 +166,18 @@ a:active {
 
 .alert {
   padding: 0.5rem;
+  margin-top: 0;
   background-color: rgb(222, 180, 179);
 }
 
-/* Fix for devise log in screen */
+/* Fixes for devise log in screen */
 .field {
   margin-bottom: 1rem;
 }
 .field input[type="checkbox"] {
   width: auto;
+}
+.login-links {
+  margin-top: 1.5rem;
+  text-align: center;
 }

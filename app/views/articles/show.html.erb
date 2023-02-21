@@ -5,8 +5,10 @@
     <h4><time><%= @article.created_date %></time></h4>
   </header>
   <p><%= @article.body %></p>
-  <ul>
-    <li><%= link_to "Edit", edit_article_path(@article) %></li>
-    <li><%= link_to "Delete", article_path(@article), data: {turbo_method: :delete, turbo_config: "Are you sure?"} %></li>
-  </ul>
+  <% if user_signed_in? %>
+    <ul>
+      <li><%= link_to "Edit", edit_article_path(@article) %></li>
+      <li><%= link_to "Delete", article_path(@article), data: {turbo_method: :delete, turbo_config: "Are you sure?"} %></li>
+    </ul>
+  <% end %>
 </article>

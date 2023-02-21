@@ -1,6 +1,11 @@
 class ArticlesController < ApplicationController
+  skip_before_action :authenticate_user!, only: %i[show index]
+
   def index
-    @articles = Article.where(status: 'public')
+    @articles = Article.where.not(status: 'archived')
+    return if user_signed_in?
+
+    @articles = @articles.where.not(status: 'private')
   end
 
   def show

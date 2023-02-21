@@ -15,17 +15,18 @@
         |
         <li><%= link_to "Blog", blog_path, class: cp(blog_path, request.path) %></li>
       </ul>
-      <ul>
+      <div class="auth">
         <%# TODO: Make this link only for logged-in users %>
         <% if user_signed_in? %>
-          <li><a href="/">Admin</a></li>
-          |
-          <li><%= button_to "Sign out", destroy_user_session_path, method: :delete %></li>
-          <li><%= current_user.email %></li>
+          <div><%= current_user.email %></div>
+          <ul>
+            <li><a href="/">Admin</a></li>
+            <li><%= button_to "Sign out", destroy_user_session_path, method: :delete %></li>
+          </ul>
         <% else %>
-          <%= link_to "Sign in", new_user_session_path %>
+          <%= link_to "Sign in", new_user_session_path, class: cp(new_user_session_path, request.path) %>
         <% end %>
-      </ul>
+      </div>
     </nav>
     <main>
       <% if notice %>
