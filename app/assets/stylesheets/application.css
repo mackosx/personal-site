@@ -67,12 +67,12 @@ p {
 
 /* Form */
 
-form input,
+form input:not(input[type="checkbox"]),
 form textarea {
   width: 100%;
 }
 
-form input {
+form input:not(input[type="checkbox"]) {
   height: 2rem;
 }
 
@@ -149,4 +149,12 @@ a:active {
 .alert {
   padding: 0.5rem;
   background-color: rgb(222, 180, 179);
+}
+
+/* Fix for devise log in screen */
+.field {
+  margin-bottom: 1rem;
+}
+.field input[type="checkbox"] {
+  width: auto;
 }

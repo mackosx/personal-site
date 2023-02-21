@@ -23,7 +23,7 @@
           <li><%= button_to "Sign out", destroy_user_session_path, method: :delete %></li>
           <li><%= current_user.email %></li>
         <% else %>
-          <%= button_to "Sign in", user_session_path %>
+          <%= link_to "Sign in", new_user_session_path %>
         <% end %>
       </ul>
     </nav>
