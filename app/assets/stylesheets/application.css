@@ -16,22 +16,22 @@
  */
 
 @font-face {
-  font-family: 'etbook';
-  src: url('etbookot-roman-webfont.woff');
+  font-family: "etbook";
+  src: url("etbookot-roman-webfont.woff");
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'etbook';
-  src: url('etbookot-bold-webfont.woff');
+  font-family: "etbook";
+  src: url("etbookot-bold-webfont.woff");
   font-weight: 700;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'etbook';
-  src: url('etbookot-roman-webfont.woff');
+  font-family: "etbook";
+  src: url("etbookot-roman-webfont.woff");
   font-weight: 400;
   font-style: italic;
 }
@@ -44,7 +44,7 @@
 
 html {
   font-size: 20px;
-  font-family:"etbook", 'Times New Roman', Times, serif;
+  font-family: "etbook", "Times New Roman", Times, serif;
 }
 
 main {
@@ -67,7 +67,8 @@ p {
 
 /* Form */
 
-form input, form textarea {
+form input,
+form textarea {
   width: 100%;
 }
 
@@ -84,7 +85,7 @@ form textarea {
   border: 1px dashed rgb(165, 165, 165);
 }
 
-form input[type='submit'] {
+form input[type="submit"] {
   background-color: rgb(71, 82, 157);
   color: white;
   border: none;
@@ -99,7 +100,9 @@ nav {
 
 nav .current {
   box-sizing: content-box;
-  border: rgb(130, 160, 156) 3px solid;
+  text-decoration-color: rgb(130, 160, 156);
+  text-decoration-thickness: 4px;
+  text-decoration: underline;
 }
 
 nav ul {
@@ -110,13 +113,23 @@ nav ul {
 
 nav ul li {
   display: inline;
-
 }
 
 nav a {
   padding: 0.5rem;
+  text-decoration: none;
 }
 
 nav a:visited {
   color: inherit;
+}
+
+nav a:hover {
+  text-decoration-color: rgb(178, 220, 214);
+  text-decoration: underline;
+  text-decoration-thickness: 4px;
+}
+
+nav a:active {
+  color: rgb(178, 220, 214);
 }
