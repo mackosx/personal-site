@@ -14,6 +14,9 @@
         <li><%= link_to "Home", root_path, class: cp(root_path, request.path) %></li>
         |
         <li><%= link_to "Blog", blog_path, class: cp(blog_path, request.path) %></li>
+        |
+        <%# TODO: Make this link only for logged-in users %>
+        <li><a href="/">Admin</a></li>
       </ul>
     </nav>
     <main>

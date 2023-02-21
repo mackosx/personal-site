@@ -117,19 +117,23 @@ nav ul li {
 
 nav a {
   padding: 0.5rem;
-  text-decoration: none;
 }
 
-nav a:visited {
+a {
+  text-decoration: none;
+  /* font-variant: all-small-caps; */
+}
+
+a:visited {
   color: inherit;
 }
 
-nav a:hover {
+a:hover {
   text-decoration-color: rgb(178, 220, 214);
   text-decoration: underline;
   text-decoration-thickness: 4px;
 }
 
-nav a:active {
+a:active {
   color: rgb(178, 220, 214);
 }
