@@ -16,7 +16,6 @@
         <li><%= link_to "Blog", blog_path, class: cp(blog_path, request.path) %></li>
       </ul>
       <div class="auth">
-        <%# TODO: Make this link only for logged-in users %>
         <% if user_signed_in? %>
           <div><%= current_user.email %></div>
           <ul>

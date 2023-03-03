@@ -85,6 +85,10 @@ a:active {
   color: rgb(178, 220, 214);
 }
 
+form.inline {
+  display: inline;
+}
+
 /* Form */
 
 form input:not(input[type="checkbox"]),
