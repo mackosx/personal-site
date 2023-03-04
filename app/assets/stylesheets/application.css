@@ -16,6 +16,8 @@
  * require app/assets/stylesheets/actiontext.css
  */
 
+/* Fonts */
+
 @font-face {
   font-family: "etbook";
   src: url("etbookot-roman-webfont.woff");
@@ -35,6 +37,17 @@
   src: url("etbookot-italic-webfont.woff");
   font-weight: 400;
   font-style: italic;
+}
+
+/* Colours */
+
+:root {
+  --primary: rgb(71, 82, 157);
+  --primary-hover: rgb(44, 52, 97);
+  --secondary: rgb(130, 160, 156);
+  --secondary-hover: rgb(130, 160, 156);
+  --info: rgb(196, 216, 221);
+  --danger: rgb(222, 180, 179);
 }
 
 /* Text */
@@ -77,7 +90,7 @@ a:any-link {
 }
 
 a:hover {
-  text-decoration-color: rgb(130, 160, 156);
+  text-decoration-color: var(--secondary-hover);
   text-decoration: underline;
   text-decoration-thickness: 4px;
 }
@@ -112,7 +125,7 @@ form textarea {
 
 form input[type="submit"],
 button {
-  background-color: rgb(71, 82, 157);
+  background-color: var(--primary);
   color: white;
   border: none;
   cursor: pointer;
@@ -120,7 +133,7 @@ button {
 
 form input[type="submit"]:hover,
 button:hover {
-  background-color: rgb(44, 52, 97);
+  background-color: var(--primary-hover);
 }
 
 /* Navigation */
@@ -133,7 +146,7 @@ nav {
 
 nav .current {
   box-sizing: content-box;
-  text-decoration-color: rgb(130, 160, 156);
+  text-decoration-color: var(--secondary);
   text-decoration-thickness: 4px;
   text-decoration: underline;
 }
@@ -166,13 +179,13 @@ div.auth div {
 
 .notice {
   padding: 0.5rem;
-  background-color: rgb(196, 216, 221);
+  background-color: var(--info);
 }
 
 .alert {
   padding: 0.5rem;
   margin-top: 0;
-  background-color: rgb(222, 180, 179);
+  background-color: var(--danger);
 }
 
 /* Fixes for devise log in screen */

@@ -18,8 +18,13 @@
   max-width: 33%;
 }
 
-.trix-content .attachment-gallery.attachment-gallery--2 > action-text-attachment,
-.trix-content .attachment-gallery.attachment-gallery--2 > .attachment, .trix-content .attachment-gallery.attachment-gallery--4 > action-text-attachment,
+.trix-content
+  .attachment-gallery.attachment-gallery--2
+  > action-text-attachment,
+.trix-content .attachment-gallery.attachment-gallery--2 > .attachment,
+.trix-content
+  .attachment-gallery.attachment-gallery--4
+  > action-text-attachment,
 .trix-content .attachment-gallery.attachment-gallery--4 > .attachment {
   flex-basis: 50%;
   max-width: 50%;
@@ -28,4 +33,27 @@
 .trix-content action-text-attachment .attachment {
   padding: 0 !important;
   max-width: 100% !important;
+}
+
+.trix-content blockquote {
+  border: 0 solid var(--primary);
+  border-left-width: 0.3em;
+  margin-left: 0.3em;
+  padding-left: 0.6em;
+}
+
+.trix-content button:hover {
+  background-color: initial;
+}
+
+trix-toolbar > .trix-button-row {
+  flex-wrap: wrap;
+}
+
+.trix-button:hover {
+  background-color: white;
+}
+
+trix-toolbar > .trix-button-row > .trix-button-group--file-tools {
+  margin-left: 0;
 }
