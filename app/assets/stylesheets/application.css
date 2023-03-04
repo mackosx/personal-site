@@ -1,0 +1,213 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require normalize-rails
+ *= require_tree .
+ *= require_self
+ * require app/assets/stylesheets/actiontext.css
+ */
+
+/* Fonts */
+
+@font-face {
+  font-family: "etbook";
+  src: url("etbookot-roman-webfont.woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "etbook";
+  src: url("etbookot-bold-webfont.woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "etbook";
+  src: url("etbookot-italic-webfont.woff");
+  font-weight: 400;
+  font-style: italic;
+}
+
+/* Colours */
+
+:root {
+  --primary: rgb(71, 82, 157);
+  --primary-hover: rgb(44, 52, 97);
+  --secondary: rgb(130, 160, 156);
+  --secondary-hover: rgb(130, 160, 156);
+  --info: rgb(196, 216, 221);
+  --danger: rgb(222, 180, 179);
+}
+
+/* Text */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 20px;
+  font-family: "etbook", "Times New Roman", Times, serif;
+}
+
+main {
+  max-width: 30rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+article header h1 {
+  text-align: center;
+}
+
+article header h1 > div {
+  font-size: 1rem;
+  font-weight: normal;
+  margin-top: 1rem;
+}
+
+p {
+  line-height: 1.4;
+}
+
+.article-list {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.article-list .date {
+  width: 110px;
+  display: inline-block;
+}
+
+/* Links */
+
+a {
+  text-decoration: none;
+}
+
+a:any-link {
+  color: inherit;
+}
+
+a:hover {
+  text-decoration-color: var(--secondary-hover);
+  text-decoration: underline;
+  text-decoration-thickness: 4px;
+}
+
+a:active {
+  color: rgb(178, 220, 214);
+}
+
+form.inline {
+  display: inline;
+}
+
+/* Form */
+
+form input:not(input[type="checkbox"]),
+form textarea {
+  width: 100%;
+}
+
+form input:not(input[type="checkbox"]) {
+  height: 2rem;
+}
+
+form label {
+  font-variant: all-small-caps;
+}
+
+form textarea {
+  padding: 0.5rem;
+  border: 1px dashed rgb(165, 165, 165);
+}
+
+form input[type="submit"],
+button {
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+form input[type="submit"]:hover,
+button:hover {
+  background-color: var(--primary-hover);
+}
+
+/* Navigation */
+
+nav {
+  padding: 2rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+nav .current {
+  box-sizing: content-box;
+  text-decoration-color: var(--secondary);
+  text-decoration-thickness: 4px;
+  text-decoration: underline;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  display: inline;
+}
+
+nav a {
+  padding: 0.5rem;
+}
+
+div.auth form {
+  display: inline;
+  width: auto;
+}
+
+div.auth div {
+  padding: 0 0.5rem 0.5rem 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Flash messages */
+
+.notice {
+  padding: 0.5rem;
+  background-color: var(--info);
+}
+
+.alert {
+  padding: 0.5rem;
+  margin-top: 0;
+  background-color: var(--danger);
+}
+
+/* Fixes for devise log in screen */
+.field {
+  margin-bottom: 1rem;
+}
+.field input[type="checkbox"] {
+  width: auto;
+}
+.login-links {
+  margin-top: 1.5rem;
+  text-align: center;
+}
