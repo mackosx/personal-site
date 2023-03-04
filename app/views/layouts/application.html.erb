@@ -17,11 +17,7 @@
       </ul>
       <div class="auth">
         <% if user_signed_in? %>
-          <div><%= current_user.email %></div>
-          <ul>
-            <li><a href="/">Admin</a></li>
-            <li><%= button_to "Sign out", destroy_user_session_path, method: :delete %></li>
-          </ul>
+          <span><%= current_user.email %> <%= button_to "Sign out", destroy_user_session_path, method: :delete %></span>
         <% else %>
           <%= link_to "Sign in", new_user_session_path, class: cp(new_user_session_path, request.path) %>
         <% end %>
