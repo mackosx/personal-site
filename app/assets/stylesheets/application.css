@@ -13,7 +13,7 @@
  *= require normalize-rails
  *= require_tree .
  *= require_self
- *= require app/assets/stylesheets/actiontext.css
+ * require app/assets/stylesheets/actiontext.css
  */
 
 @font-face {
@@ -32,7 +32,7 @@
 
 @font-face {
   font-family: "etbook";
-  src: url("etbookot-roman-webfont.woff");
+  src: url("etbookot-italic-webfont.woff");
   font-weight: 400;
   font-style: italic;
 }
