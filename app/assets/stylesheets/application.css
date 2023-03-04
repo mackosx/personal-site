@@ -62,9 +62,16 @@ html {
 }
 
 main {
+  margin-left: 2.5rem;
+  margin-right: 2.5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+main > section {
   max-width: 30rem;
-  margin-left: auto;
-  margin-right: auto;
+  flex: 1;
 }
 
 article header h1 {
