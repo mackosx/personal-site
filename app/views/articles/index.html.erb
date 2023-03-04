@@ -1,12 +1,11 @@
 <h1>Articles</h1>
-My blog has <%= pluralize(@articles.length, "article") %>.
 <% if user_signed_in? %>
   <%= button_to "New Article", new_article_path, {form_class: "inline", method: "get"} %>
 <% end %>
-<ul>
+<ul class="article-list">
   <% @articles.each do |article| %>
     <li>
-      <%= link_to (user_signed_in? ? "[#{article.status}] #{article.title}" : "#{article.title}"), article %>, <%= article.created_date %>
+      <span class="date"><%= article.created_date %></span><%= (user_signed_in? ? "[#{article.status}] " : "") %><%= link_to "#{article.title}", article %>
     </li>
   <% end %>
 </ul>

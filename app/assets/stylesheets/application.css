@@ -79,6 +79,16 @@ p {
   line-height: 1.4;
 }
 
+.article-list {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.article-list .date {
+  width: 110px;
+  display: inline-block;
+}
+
 /* Links */
 
 a {

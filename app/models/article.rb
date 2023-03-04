@@ -7,6 +7,6 @@ class Article < ApplicationRecord
   has_rich_text :body
 
   def created_date
-    created_at.localtime.strftime '%-d/%-m/%Y'
+    created_at.localtime.strftime '%d/%m/%Y'
   end
 end
