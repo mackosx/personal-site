@@ -71,8 +71,10 @@ article header h1 {
   text-align: center;
 }
 
-article header h4 {
-  text-align: center;
+article header h1 > div {
+  font-size: 1rem;
+  font-weight: normal;
+  margin-top: 1rem;
 }
 
 p {

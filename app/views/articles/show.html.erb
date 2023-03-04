@@ -1,8 +1,9 @@
 <%= link_to "< Back", articles_path %>
 <article>
   <header>
-    <h1><%= @article.title %></h1>
-    <h4><time><%= @article.created_date %></time></h4>
+    <h1><%= @article.title %>
+      <div><%= @article.created_date %></div>
+    </h1>
   </header>
   <p><%= @article.body %></p>
   <% if user_signed_in? %>
