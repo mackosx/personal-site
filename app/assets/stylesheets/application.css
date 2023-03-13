@@ -129,12 +129,12 @@ form.inline {
 
 /* Form */
 
-form input:not(input[type="checkbox"]),
+form input[type="text"],
 form textarea {
   width: 100%;
 }
 
-form input:not(input[type="checkbox"]) {
+form input[type="text"] {
   height: 2rem;
 }
 
@@ -160,6 +160,13 @@ button {
 form input[type="submit"]:hover,
 button:hover {
   background-color: var(--primary-darker);
+}
+
+.article-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  flex-wrap: wrap;
 }
 
 /* Navigation */

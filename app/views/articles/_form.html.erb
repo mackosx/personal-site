@@ -17,8 +17,8 @@
       <div><%= message %></div>
     <% end %>
   </p>
-  <p>
+  <div class="article-actions">
     <%= link_to "Cancel", (form.object.new_record? ? articles_path : article) %>
     <%= form.submit %>
-  </p>
+  </div>
 <% end %>
