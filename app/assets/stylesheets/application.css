@@ -42,10 +42,11 @@
 /* Colours */
 
 :root {
+  --primary-lighter: rgb(105, 121, 223);
   --primary: rgb(71, 82, 157);
-  --primary-hover: rgb(44, 52, 97);
+  --primary-darker: rgb(44, 52, 97);
   --secondary: rgb(130, 160, 156);
-  --secondary-hover: rgb(130, 160, 156);
+  --secondary-lighter: rgb(178, 220, 214);
   --info: rgb(196, 216, 221);
   --danger: rgb(222, 180, 179);
 }
@@ -61,9 +62,11 @@ html {
   font-family: "etbook", "Times New Roman", Times, serif;
 }
 
+body {
+  padding: 1.5rem;
+}
+
 main {
-  margin-left: 2.5rem;
-  margin-right: 2.5rem;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -104,18 +107,20 @@ a {
   text-decoration: none;
 }
 
+main a {
+  text-decoration: underline;
+  text-decoration-thickness: 4px;
+  text-decoration-color: var(--secondary);
+}
+
 a:any-link {
   color: inherit;
 }
 
 a:hover {
-  text-decoration-color: var(--secondary-hover);
+  text-decoration-color: var(--secondary-lighter);
   text-decoration: underline;
   text-decoration-thickness: 4px;
-}
-
-a:active {
-  color: rgb(178, 220, 214);
 }
 
 form.inline {
@@ -145,52 +150,58 @@ form textarea {
 form input[type="submit"],
 button {
   background-color: var(--primary);
+  padding: 0.5rem 1rem;
   color: white;
   border: none;
   cursor: pointer;
+  font-variant: all-small-caps;
 }
 
 form input[type="submit"]:hover,
 button:hover {
-  background-color: var(--primary-hover);
+  background-color: var(--primary-darker);
 }
 
 /* Navigation */
 
 nav {
-  padding: 2rem;
   display: flex;
   justify-content: space-between;
+  align-items: baseline;
 }
 
 nav .current {
   box-sizing: content-box;
-  text-decoration-color: var(--secondary);
+  text-decoration-color: var(--primary);
   text-decoration-thickness: 4px;
   text-decoration: underline;
+}
+
+nav a:hover {
+  text-decoration-color: var(--primary-lighter);
 }
 
 nav ul {
   list-style-type: none;
   padding: 0;
   margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  font-variant: all-small-caps;
+  align-items: start;
+  width: 5.5rem;
 }
 
-nav ul li {
-  display: inline;
+div.auth {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  margin-left: 1rem;
 }
 
-nav a {
-  padding: 0.5rem;
-}
-
-div.auth form {
-  display: inline;
-  width: auto;
-}
-
-div.auth div {
-  padding: 0 0.5rem 0.5rem 0.5rem;
+div.auth span {
+  padding-right: 0.5rem;
   margin-bottom: 0.5rem;
 }
 
