@@ -109,8 +109,9 @@ a {
 
 main a {
   text-decoration: underline;
-  text-decoration-thickness: 4px;
+  text-decoration: underline 4px;
   text-decoration-color: var(--secondary);
+  text-decoration-thickness: 4px;
 }
 
 a:any-link {
@@ -118,9 +119,10 @@ a:any-link {
 }
 
 a:hover {
-  text-decoration-color: var(--secondary-lighter);
   text-decoration: underline;
+  text-decoration: underline 4px;
   text-decoration-thickness: 4px;
+  text-decoration-color: var(--secondary-lighter);
 }
 
 form.inline {
@@ -179,9 +181,10 @@ nav {
 
 nav .current {
   box-sizing: content-box;
+  text-decoration: underline;
+  text-decoration: underline 4px;
   text-decoration-color: var(--primary);
   text-decoration-thickness: 4px;
-  text-decoration: underline;
 }
 
 nav a:hover {
