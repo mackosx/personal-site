@@ -7,32 +7,35 @@
     <%= csp_meta_tag %>
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
+    <%= favicon_link_tag "favicon.ico" %>
+    <% [192, 512].each do |size| %>
+      <%= favicon_link_tag "icon#{size}.png", type: 'image/png', sizes: "#{size}x#{size}" %>
+    <% end %>
   </head>
   <body>
     <nav>
       <ul>
         <li><%= link_to "Home", root_path, class: cp(root_path, request.path) %></li>
-        |
         <li><%= link_to "Blog", blog_path, class: cp(blog_path, request.path) %></li>
       </ul>
       <div class="auth">
         <% if user_signed_in? %>
-          <span><%= current_user.email %> <%= button_to "Sign out", destroy_user_session_path, method: :delete %></span>
-        <% else %>
-          <%= link_to "Sign in", new_user_session_path, class: cp(new_user_session_path, request.path) %>
-        <% end %>
-      </div>
-    </nav>
-    <main>
-      <section>
-        <% if notice %>
-          <p class="notice"><%= notice %></p>
-        <% end %>
-        <% if alert %>
-          <p class="alert"><%= alert %></p>
-        <% end %>
-        <%= yield %>
-      </section>
-    </main>
-  </body>
+          <span><%= current_user.email %></span><%= button_to "Sign out", destroy_user_session_path, method: :delete %></span>
+      <% else %>
+        <%= link_to "Sign in", new_user_session_path, class: cp(new_user_session_path, request.path) %>
+      <% end %>
+    </div>
+  </nav>
+  <main>
+    <section>
+      <% if notice %>
+        <p class="notice"><%= notice %></p>
+      <% end %>
+      <% if alert %>
+        <p class="alert"><%= alert %></p>
+      <% end %>
+      <%= yield %>
+    </section>
+  </main>
+</body>
 </html>
